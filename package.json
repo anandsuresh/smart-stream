@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A smart stream implementation",
   "license": "MIT",
-  "main": "lib/smart-stream.js",
+  "main": "lib/smart_stream.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anandsuresh/smart-stream.git"
@@ -19,8 +19,8 @@
     "test": "mocha --ui bdd --reporter spec --recursive spec"
   },
   "dependencies": {
-    "msgpack5": "4.0.2",
-    "smart_timer": "^1.0.0"
+    "@anandsuresh/smart-timer": "^1.0.0",
+    "msgpack5": "4.0.2"
   },
   "devDependencies": {
     "chai": "4.1.2",
