@@ -1,3 +1,7 @@
+![npm (scoped)](https://img.shields.io/npm/v/@anandsuresh/smart-stream.svg?style=plastic)
+![Travis](https://img.shields.io/travis/anandsuresh/smart-stream.svg?style=plastic)
+![npm](https://img.shields.io/npm/dt/@anandsuresh/smart-stream.svg?style=plastic)
+
 # smart-stream
 
 A smart stream provides the abstraction of a stream of bytes. It has the following properties:
