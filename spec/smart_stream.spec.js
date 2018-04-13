@@ -41,7 +41,7 @@ describe('SmartStream', () => {
   })
 
   describe('.fromHttpRequest()', function () {
-    it('should create a stream for the specified object', function (done) {
+    it('should create a stream from an HTTP request', function (done) {
       const thisFile = readFileSync(__filename)
       const server = http
         .createServer()
@@ -75,6 +75,20 @@ describe('SmartStream', () => {
             .end(thisFile)
         })
         .listen(8080)
+    })
+  })
+
+  describe('.fromBuffer(), .toBuffer()', function () {
+    it('should create a stream from a buffer', function (done) {
+      const thisFile = readFileSync(__filename)
+
+      SmartStream
+        .fromBuffer(thisFile)
+        .toBuffer()
+        .then(buf => {
+          expect(buf.toString('utf8')).to.equal(thisFile.toString('utf8'))
+          done()
+        })
     })
   })
 
